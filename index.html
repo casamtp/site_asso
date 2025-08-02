@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amicale des Algériens de Béziers et son Agglomération</title>
+    
+    <!-- Tailwind CSS pour le style -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts pour une typographie élégante -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Script pour les icônes (Lucide) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        /* Appliquer la police Poppins à tout le site */
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        /* Style personnalisé pour le dégradé du héros */
+        .hero-gradient {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1593361688553-62535b2da58c?q=80&w=2070&auto=format&fit=crop') center center/cover no-repeat;
+        }
+        /* Effet de survol sur les cartes */
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- ======================================= -->
+    <!-- EN-TÊTE DE NAVIGATION                   -->
+    <!-- ======================================= -->
+    <header class="bg-white/80 backdrop-blur-md shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="font-extrabold text-xl text-emerald-600">
+                Amicale de Béziers
+            </div>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#apropos" class="text-gray-600 hover:text-emerald-600 font-medium transition">À Propos</a>
+                <a href="#evenements" class="text-gray-600 hover:text-emerald-600 font-medium transition">Événements</a>
+                <a href="#equipe" class="text-gray-600 hover:text-emerald-600 font-medium transition">Notre Équipe</a>
+                <a href="#contact" class="text-gray-600 hover:text-emerald-600 font-medium transition">Contact</a>
+                <a href="#contact" class="bg-emerald-500 text-white px-5 py-2 rounded-full hover:bg-emerald-600 transition shadow-sm">
+                    Nous Rejoindre
+                </a>
+            </div>
+            <!-- Menu mobile (hamburger) -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-600 hover:text-emerald-600 focus:outline-none">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </nav>
+        <!-- Menu déroulant pour mobile -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-2">
+            <a href="#apropos" class="block px-6 py-2 text-gray-600 hover:bg-gray-100">À Propos</a>
+            <a href="#evenements" class="block px-6 py-2 text-gray-600 hover:bg-gray-100">Événements</a>
+            <a href="#equipe" class="block px-6 py-2 text-gray-600 hover:bg-gray-100">Notre Équipe</a>
+            <a href="#contact" class="block px-6 py-2 text-gray-600 hover:bg-gray-100">Contact</a>
+            <div class="px-6 py-3">
+                 <a href="#contact" class="w-full text-center block bg-emerald-500 text-white px-4 py-2 rounded-full hover:bg-emerald-600 transition">
+                    Nous Rejoindre
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- ======================================= -->
+        <!-- SECTION HÉROS (ACCUEIL)                 -->
+        <!-- ======================================= -->
+        <section id="hero" class="hero-gradient text-white h-[70vh] flex items-center justify-center">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4 drop-shadow-lg">Amicale des Algériens de Béziers et son Agglomération</h1>
+                <p class="text-lg md:text-xl text-gray-200 mb-8 max-w-3xl mx-auto">Un pont de solidarité, de culture et de fraternité au cœur de l'Occitanie.</p>
+                <a href="#apropos" class="bg-white text-emerald-600 font-bold px-8 py-4 rounded-full hover:bg-gray-200 transition text-lg shadow-xl">
+                    Découvrir l'Amicale
+                </a>
+            </div>
+        </section>
+
+        <!-- ======================================= -->
+        <!-- SECTION À PROPOS                      -->
+        <!-- ======================================= -->
+        <section id="apropos" class="py-24">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1542142407-a4b53158e578?q=80&w=1887&auto=format&fit=crop" alt="Image illustrant la communauté et le partage" class="rounded-lg shadow-2xl">
+                    </div>
+                    <div>
+                        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Bienvenue à l'Amicale</h2>
+                        <p class="text-gray-600 text-lg mb-6 leading-relaxed">
+                            Fondée le **24 juin 2025**, notre association est née d'une volonté commune de tisser des liens forts au sein de la communauté. Notre mission est de créer un espace de rencontre, de solidarité et de célébration de la richesse de la culture algérienne.
+                        </p>
+                        <p class="text-gray-600 text-lg leading-relaxed">
+                            Nous œuvrons pour favoriser l'intégration et le dialogue au cœur de la vie locale biterroise, en étant ouverts à tous ceux qui partagent nos valeurs de fraternité et de respect.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================================= -->
+        <!-- SECTION OBJECTIFS                     -->
+        <!-- ======================================= -->
+        <section id="objectifs" class="py-24 bg-emerald-50">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Nos Missions</h2>
+                    <p class="text-gray-600 mt-2 text-lg">Les piliers de notre engagement.</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Carte Objectif -->
+                    <div class="bg-white p-8 rounded-lg shadow-lg text-center card-hover">
+                        <div class="flex justify-center mb-4">
+                            <div class="bg-emerald-100 p-4 rounded-full">
+                                <i data-lucide="heart-handshake" class="text-emerald-600 h-8 w-8"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Renforcer la Solidarité</h3>
+                        <p class="text-gray-600">Créer un réseau d'entraide et de soutien mutuel pour tous les membres.</p>
+                    </div>
+                     <!-- Carte Objectif -->
+                    <div class="bg-white p-8 rounded-lg shadow-lg text-center card-hover">
+                        <div class="flex justify-center mb-4">
+                            <div class="bg-amber-100 p-4 rounded-full">
+                                <i data-lucide="palette" class="text-amber-600 h-8 w-8"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Promouvoir la Culture</h3>
+                        <p class="text-gray-600">Organiser des événements pour partager et célébrer la culture algérienne.</p>
+                    </div>
+                     <!-- Carte Objectif -->
+                    <div class="bg-white p-8 rounded-lg shadow-lg text-center card-hover">
+                        <div class="flex justify-center mb-4">
+                            <div class="bg-sky-100 p-4 rounded-full">
+                                <i data-lucide="book-open-check" class="text-sky-600 h-8 w-8"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Soutenir l'Intégration</h3>
+                        <p class="text-gray-600">Aider à l'alphabétisation et favoriser l'intégration sociale dans le tissu local.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================================= -->
+        <!-- SECTION ÉVÉNEMENTS                    -->
+        <!-- ======================================= -->
+        <section id="evenements" class="py-24">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Nos Prochains Événements</h2>
+                    <p class="text-gray-600 mt-2 text-lg">Rejoignez-nous pour des moments de partage.</p>
+                </div>
+                <div class="max-w-4xl mx-auto space-y-8">
+                    <!-- Événement 1 -->
+                    <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col md:flex-row items-center gap-6">
+                        <div class="bg-emerald-500 text-white font-bold text-center rounded-lg p-4 w-24">
+                            <p class="text-5xl">15</p>
+                            <p class="text-sm">SEPT</p>
+                        </div>
+                        <div class="flex-grow text-center md:text-left">
+                            <h3 class="text-xl font-bold">Soirée Couscous Solidaire</h3>
+                            <p class="text-gray-500"><i data-lucide="map-pin" class="inline-block h-4 w-4 mr-1"></i>Maison des Associations, Béziers</p>
+                        </div>
+                        <a href="#" class="bg-emerald-100 text-emerald-700 font-medium px-4 py-2 rounded-full hover:bg-emerald-200 transition">En savoir plus</a>
+                    </div>
+                    <!-- Événement 2 -->
+                    <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col md:flex-row items-center gap-6">
+                        <div class="bg-amber-500 text-white font-bold text-center rounded-lg p-4 w-24">
+                            <p class="text-5xl">28</p>
+                            <p class="text-sm">OCT</p>
+                        </div>
+                        <div class="flex-grow text-center md:text-left">
+                            <h3 class="text-xl font-bold">Exposition d'Artisanat Algérien</h3>
+                            <p class="text-gray-500"><i data-lucide="map-pin" class="inline-block h-4 w-4 mr-1"></i>Salle Zinga Zanga, Béziers</p>
+                        </div>
+                        <a href="#" class="bg-amber-100 text-amber-700 font-medium px-4 py-2 rounded-full hover:bg-amber-200 transition">Détails à venir</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================================= -->
+        <!-- SECTION ÉQUIPE                        -->
+        <!-- ======================================= -->
+        <section id="equipe" class="py-24 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Notre Équipe Dirigeante</h2>
+                    <p class="text-gray-600 mt-2 text-lg">Des membres engagés au service de l'association.</p>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-8 max-w-7xl mx-auto">
+                    <!-- Membre -->
+                    <div class="text-center space-y-2">
+                        <img src="https://placehold.co/200x200/e0f2f1/065f46?text=AK" alt="Portrait de KHEIREDDINE Akram" class="w-28 h-28 rounded-full mx-auto mb-4 shadow-lg border-4 border-white">
+                        <h3 class="text-lg font-bold">K. Akram</h3>
+                        <p class="text-emerald-700 font-medium text-sm">Président</p>
+                    </div>
+                     <!-- Répétez pour chaque membre -->
+                    <div class="text-center space-y-2">
+                        <img src="https://placehold.co/200x200/e0f2f1/065f46?text=NA" alt="Portrait de AMEUR Nadjia" class="w-28 h-28 rounded-full mx-auto mb-4 shadow-lg border-4 border-white">
+                        <h3 class="text-lg font-bold">A. Nadjia</h3>
+                        <p class="text-emerald-700 font-medium text-sm">Vice-Présidente</p>
+                    </div>
+                    <div class="text-center space-y-2">
+                        <img src="https://placehold.co/200x200/e0f2f1/065f46?text=IM" alt="Portrait de MEDHJAHDI Issam" class="w-28 h-28 rounded-full mx-auto mb-4 shadow-lg border-4 border-white">
+                        <h3 class="text-lg font-bold">M. Issam</h3>
+                        <p class="text-emerald-700 font-medium text-sm">Vice-Président</p>
+                    </div>
+                    <div class="text-center space-y-2">
+                        <img src="https://placehold.co/200x200/e0f2f1/065f46?text=SS" alt="Portrait de SAFTI Sabrina" class="w-28 h-28 rounded-full mx-auto mb-4 shadow-lg border-4 border-white">
+                        <h3 class="text-lg font-bold">S. Sabrina</h3>
+                        <p class="text-emerald-700 font-medium text-sm">Trésorière</p>
+                    </div>
+                    <div class="text-center space-y-2">
+                        <img src="https://placehold.co/200x200/e0f2f1/065f46?text=FB" alt="Portrait de BENHAMOU Fayçal" class="w-28 h-28 rounded-full mx-auto mb-4 shadow-lg border-4 border-white">
+                        <h3 class="text-lg font-bold">B. Fayçal</h3>
+                        <p class="text-emerald-700 font-medium text-sm">Secrétaire</p>
+                    </div>
+                    <div class="text-center space-y-2">
+                        <img src="https://placehold.co/200x200/e0f2f1/065f46?text=SN" alt="Portrait de SOUIDI Nadia" class="w-28 h-28 rounded-full mx-auto mb-4 shadow-lg border-4 border-white">
+                        <h3 class="text-lg font-bold">S. Nadia</h3>
+                        <p class="text-emerald-700 font-medium text-sm">Adj. Secrétaire</p>
+                    </div>
+                    <div class="text-center space-y-2">
+                        <img src="https://placehold.co/200x200/e0f2f1/065f46?text=ML" alt="Portrait de MEZAI Lamia" class="w-28 h-28 rounded-full mx-auto mb-4 shadow-lg border-4 border-white">
+                        <h3 class="text-lg font-bold">M. Lamia</h3>
+                        <p class="text-emerald-700 font-medium text-sm">Adj. Trésorière</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================================= -->
+        <!-- SECTION CONTACT / NOUS REJOINDRE        -->
+        <!-- ======================================= -->
+        <section id="contact" class="py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="bg-gray-800 rounded-lg shadow-2xl p-8 md:p-12 lg:p-16 grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="text-white">
+                        <h2 class="text-3xl md:text-4xl font-bold mb-4">Rejoignez l'Aventure !</h2>
+                        <p class="text-gray-300 text-lg mb-8">Devenez membre, participez à nos événements ou contactez-nous pour toute question. Votre soutien est précieux.</p>
+                        <div class="space-y-4">
+                            <p class="flex items-center">
+                                <i data-lucide="mail" class="mr-3 text-emerald-400"></i>
+                                <a href="mailto:contact.amicale.beziers@exemple.com" class="hover:underline">contact.amicale.beziers@exemple.com</a>
+                            </p>
+                            <p class="flex items-center">
+                                <i data-lucide="map-pin" class="mr-3 text-emerald-400"></i>
+                                <span>40 Bd de Verdun, 34500 Béziers</span>
+                            </p>
+                            <p class="flex items-center">
+                                <i data-lucide="facebook" class="mr-3 text-emerald-400"></i>
+                                <a href="#" class="hover:underline">Suivez-nous sur Facebook</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-xl text-center">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Devenez Membre</h3>
+                        <p class="text-gray-600 mb-6">Soutenez nos actions et participez à la vie de l'Amicale en adhérant dès aujourd'hui.</p>
+                        <a href="#" class="w-full block bg-emerald-500 text-white font-bold px-8 py-4 rounded-full hover:bg-emerald-600 transition text-lg shadow-md">
+                            Adhérer via HelloAsso
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ======================================= -->
+    <!-- PIED DE PAGE                          -->
+    <!-- ======================================= -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p class="font-bold text-lg mb-2">Amicale des Algériens de Béziers et son Agglomération</p>
+            <p class="text-gray-400 text-sm">&copy; 2025 - Tous droits réservés.</p>
+            <p class="text-gray-500 text-xs mt-2">
+                Association loi 1901 | SIRET : 989 529 557 00013 | RNA : W341014602
+            </p>
+        </div>
+    </footer>
+    
+    <script>
+        // Rendre les icônes Lucide visibles
+        lucide.createIcons();
+
+        // Script pour le menu mobile
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Fermer le menu mobile lors du clic sur un lien
+        const mobileLinks = document.querySelectorAll('#mobile-menu a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
